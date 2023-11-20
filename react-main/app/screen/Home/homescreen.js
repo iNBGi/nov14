@@ -19,18 +19,7 @@ export const Homescreen = ({ navigation, route  }) => {
     return(
 <SafeAreaView style={Homestyle.content}>
     <View>
-    
-    <Card>
-    
-        
-       <Card.Actions style={Homestyle.card}>
-       <Image style={{width:35,height:35,marginRight: 5}}  source={require('./asset/blacklogo.png')}></Image>
-       <Button onPress={() => navigation.navigate('Menu')} style={Homestyle.button}>Menu</Button>
-      <Button onPress={() => navigation.navigate('Home')} style={Homestyle.button}>Home</Button>
-      <Button onPress={() => navigation.navigate('About')} style={Homestyle.button}>About</Button>
-      <Button onPress={() => navigation.navigate('Contact')} style={Homestyle.button}>Contact</Button>     
-    </Card.Actions>
-    </Card>   
+     
     </View>
     <ScrollView>
     <View>
@@ -39,7 +28,7 @@ export const Homescreen = ({ navigation, route  }) => {
        <Text style={Homestyle.titleText}>
        Welcome, {state.firstname}!
               </Text>
-       <Paragraph style={{ textAlign: 'center', color: '#ffffff' }}>Click Menu to Start your Fitness journey with Us! </Paragraph>
+       <Paragraph style={{textAlign:'center'}}>Click Menu to Start your Fitness journey with Us! </Paragraph>
        </Card.Content>
        </Card>
     </View>

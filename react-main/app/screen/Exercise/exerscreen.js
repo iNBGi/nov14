@@ -1,7 +1,10 @@
 import React from 'react';
+
 import { SafeAreaView,Text,View,ImageBackground,Image,ScrollView} from 'react-native';
 import { Card, TextInput,Button,Title,Paragraph} from 'react-native-paper';
 import { Exerstyle } from './exer.screen';
+
+
 export const Exerscreen = ({navigation}) => {
     return(
 <SafeAreaView style={Exerstyle.content}>
@@ -9,11 +12,10 @@ export const Exerscreen = ({navigation}) => {
     <Card >
        <Card.Actions  style={Exerstyle.card}>
        <Image style={{width:35,height:35,marginRight: 5}}  source={require('./asset/blacklogo.png')}></Image>
-       <Button onPress={() => navigation.navigate('Menu')}>Back</Button> 
        <Button onPress={() => navigation.navigate('Menu')}>Back</Button>     
     </Card.Actions>
     </Card>
-
+   
  
     </View>
     <ScrollView>
@@ -31,6 +33,7 @@ export const Exerscreen = ({navigation}) => {
       <Title>Treadmill</Title>
     </Card.Content>
     </Card>
+
     <Card style={Exerstyle.card1}>
     <Card.Cover style={Exerstyle.cardcover} resizeMode={`cover`} source={require('./asset/5.png')}/>
     <Card.Content>
@@ -44,6 +47,7 @@ export const Exerscreen = ({navigation}) => {
       <Title>Abdominal Bench</Title>
     </Card.Content>
     </Card>
+
     <Card style={Exerstyle.card1}>
     <Card.Cover style={Exerstyle.cardcover} resizeMode={`cover`} source={require('./asset/7.png')}/>
     <Card.Content>
@@ -54,7 +58,9 @@ export const Exerscreen = ({navigation}) => {
   
     </View> 
     </ScrollView> 
+
 </SafeAreaView>
+
     
    
     );

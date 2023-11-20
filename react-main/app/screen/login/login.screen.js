@@ -16,9 +16,6 @@ export const Loginscreen = ({navigation}) => {
         const [firstname, setFirstName] = useState('');
         const [loading, setLoading] = useState('false');
         const [showPassword, setShowPassword] = useState(false);
-        const handleregister = async () => {
-            const response = await axios.post('https://serverrrr-3kbl.onrender.com/register')
-        }
         const handleLogin = async () => {
           
           try {
@@ -37,7 +34,7 @@ export const Loginscreen = ({navigation}) => {
               await AsyncStorage.setItem("@auth", JSON.stringify(data));
               console.log('Stored userId:', data.userId);
               alert(data && data.message);
-              navigation.navigate('Home')
+              navigation.navigate('Homes')
               console.log("Login Data ===>", (username, password))
             } 
             
@@ -61,7 +58,7 @@ export const Loginscreen = ({navigation}) => {
     <SafeAreaView style={loginStyle.container}>
       <View style={loginStyle.content}>
         <Card style={loginStyle.card}>
-          <Card.Title title="Gym App Login" titleStyle={loginStyle.cardTitle} />
+          <Card.Title title="PoseEase Login" titleStyle={loginStyle.cardTitle} />
           <Card.Content>
             <View style={loginStyle.inputContainer}>
               <Icon name="person" size={20} color="#007BFF" style={loginStyle.icon} />

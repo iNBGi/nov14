@@ -11,7 +11,7 @@ export const Aboutstyle = StyleSheet.create({
         top: {
           flex: .2,
           borderWidth: 10,
-          borderColor: "#2f2d26",
+          borderColor: "#354259",
         },
         bottom: {
           flex: .8,
@@ -30,7 +30,7 @@ export const Aboutstyle = StyleSheet.create({
     },
     cardTitle: {
       textAlign: 'center',
-        color: "#ffffff"
+        color: "rgb(101,37,131)"
     },
     titleText: {
       marginBottom:15,
@@ -67,7 +67,7 @@ export const Aboutstyle = StyleSheet.create({
       padding: 20,
       margin:0,
       marginBottom:100,
-      backgroundColor: "#2f2d26",
+      backgroundColor: "#FFF5E0",
     },
     
 })

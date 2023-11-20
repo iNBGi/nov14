@@ -8,6 +8,11 @@ export const Recipestyle = StyleSheet.create({
         flex: 1,
         backgroundColor: "#354259",
       },
+      separator: {
+        borderBottomColor: 'gray',
+        borderBottomWidth: 1,
+        marginVertical: 10,
+      },
       
         top: {
           flex: .2,

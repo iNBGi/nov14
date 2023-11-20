@@ -16,18 +16,6 @@ export const Sensormenu = ({ navigation, route }) => {
     return (
       <SafeAreaView style={Menustyle.content}>
         <View>
-          <Card>
-            <Card.Actions style={Menustyle.card}>
-
-              <Button onPress={() => navigation.navigate('Menu')}>Menu</Button>
-              <Button onPress={() => navigation.navigate('Home')}>Home</Button>
-              <Button onPress={() => navigation.navigate('About')}> About</Button>
-              <Button onPress={() => navigation.navigate('Contact')}>Contact</Button>
-              <Button onPress={() => navigation.navigate('Information')}>
-                information
-              </Button>
-            </Card.Actions>
-          </Card>
         </View>
   
         <ScrollView>
@@ -37,8 +25,9 @@ export const Sensormenu = ({ navigation, route }) => {
               <Card
                 TouchableOpacity
                 onPress={() =>
-                  navigation.navigate('Sensorscreen'
-                   )
+                  navigation.navigate(exercise.exercise === 'Squat' ? 'Squatsensor' :
+                  exercise.exercise === 'Dumbell Curls' ? 'Dumbellsensor' :
+                   'Squatsensor')
                 }
                 style={Menustyle.card1}
               >

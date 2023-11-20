@@ -5,7 +5,7 @@ export const Contactstyle = StyleSheet.create({
     content: {
       padding: 0,
         flex: 1,
-        backgroundColor: "#1b1e31",
+        backgroundColor: "#354259",
       },
       
         top: {
@@ -18,9 +18,7 @@ export const Contactstyle = StyleSheet.create({
           
         },
         card:{
-          flexDirection:"row",
-          backgroundColor:"#302f2d"
-
+          flexDirection:"row"
            },
       image: {
         flex: 1,
@@ -32,7 +30,7 @@ export const Contactstyle = StyleSheet.create({
     },
     cardTitle: {
       textAlign: 'center',
-        color: "#fddcbd"
+        color: "rgb(101,37,131)"
     },
     titleText: {
       marginBottom:15,
@@ -67,13 +65,9 @@ export const Contactstyle = StyleSheet.create({
     card1:{
       padding: 0,
       margin:15,
-      backgroundColor: '#1b1e31', // Adjust the alpha value as needed
-
     },
     card:{
       padding: 5,
-      backgroundColor:"#1f1f1f"
-
     }
     
 })

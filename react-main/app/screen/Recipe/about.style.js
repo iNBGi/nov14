@@ -5,13 +5,13 @@ export const Aboutstyle = StyleSheet.create({
     content: {
       padding: 0,
         flex: 1,
-        backgroundColor: "#1b1e31",
+        backgroundColor: "#354259",
       },
       
         top: {
           flex: .2,
           borderWidth: 10,
-          borderColor: "#6684a1",
+          borderColor: "#354259",
         },
         bottom: {
           flex: .8,
@@ -30,12 +30,12 @@ export const Aboutstyle = StyleSheet.create({
     },
     cardTitle: {
       textAlign: 'center',
-        color: "#6684a1"
+        color: "rgb(101,37,131)"
     },
     titleText: {
       marginBottom:15,
       borderRadius: 0,
-      backgroundColor: "#1b1e31",
+      backgroundColor: "#FFFFFF",
       color: "#242F9B",
       textAlign: "center",
       padding:10,
@@ -67,7 +67,7 @@ export const Aboutstyle = StyleSheet.create({
       padding: 20,
       margin:0,
       marginBottom:100,
-      backgroundColor: "#6684a1",
+      backgroundColor: "#FFF5E0",
     },
     
 })

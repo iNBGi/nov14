@@ -11,47 +11,48 @@ import YoutubeIframe from 'react-native-youtube-iframe';
 const ExerciseCard = ({exerciseinformations, exerciseId}) => {
     const navigation = useNavigation();
     const selectedExerciseInformation = exerciseinformations
+   
 
   //handle delete prompt
   return (
     <SafeAreaView style={Menustyle.content}>
     <View>
     <Card >
-       <Card.Actions  style={Menustyle.card}>
-       <Image style={{width:35,height:35,marginRight: 5}}  source={require('./asset/blacklogo.png')}></Image>
-       <Button onPress={() => navigation.navigate('Exercisescreen')}>Back</Button>     
-       </Card.Actions>
        </Card>
        <ScrollView>
-  <View>
-    <Card style={Menustyle.card3}>
-      <Card.Content>
-        <ScrollView>
-          {selectedExerciseInformation ? (
-            <>
-              <YoutubeIframe
-                height={300}
-                videoId={selectedExerciseInformation.videolink}
-                // Set to false to auto-play the video
-              />
+   <View>
+       <Card style={Menustyle.card3}>
+       <Card.Content>
+       <ScrollView>
+    {selectedExerciseInformation ? ( // Check if selectedrecipeinformation exists
+      <>
+       <YoutubeIframe
+       height={300}
+videoId={selectedExerciseInformation.videolink}
 
-              <Title style={{ textAlign: 'center', color: 'white' }}>{selectedExerciseInformation.exercise}</Title>
+                    
+                      // Set to false to auto-play the video
+                      />
+    
+    <Title style={{ textAlign: 'center', color: 'white' }}>{selectedExerciseInformation.exercise}</Title>
               <Title style={{ textAlign: 'center', color: 'white' }}>Description</Title>
               <Paragraph style={{ color: 'white' }}>{selectedExerciseInformation.description}</Paragraph>
               <Title style={{ textAlign: 'center', color: 'white' }}>Target muscles</Title>
               <Paragraph style={{ color: 'white' }}>{selectedExerciseInformation.muscle}</Paragraph>
               <Title style={{ textAlign: 'center', color: 'white' }}>Steps</Title>
               <Paragraph style={{ color: 'white' }}>{selectedExerciseInformation.steps}</Paragraph>
-            </>
-          ) : (
-            <Text>Exercise information not found.</Text>
-          )}
-        </ScrollView>
-      </Card.Content>
-    </Card>
-  </View>
-</ScrollView>
+      
+      </>
+    ) : (
+      <Text>Exercise information not found.</Text>
+    )}
+  </ScrollView>
+ </Card.Content>
+       </Card>
 
+   </View>   
+
+   </ScrollView>
     </View>
         
 </SafeAreaView>

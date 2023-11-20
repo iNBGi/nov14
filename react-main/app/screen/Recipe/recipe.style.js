@@ -6,13 +6,13 @@ export const Recipestyle = StyleSheet.create({
       
       padding: 0,
         flex: 1,
-        backgroundColor: "#1b1e31",
+        backgroundColor: "#354259",
       },
       
         top: {
           flex: .2,
           borderWidth: 10,
-          borderColor: "#6684a1",
+          borderColor: "#354259",
         },
         bottom: {
           flex: .8,
@@ -33,7 +33,7 @@ height: '100%',
     },
     cardTitle: {
       textAlign: 'center',
-        color: "#6684a1"
+        color: "rgb(101,37,131)"
     },
     titleText: {
       marginBottom:15,
@@ -68,7 +68,7 @@ height: '100%',
       card1:{
        
         margin:20,
-        backgroundColor: "#6684a1",
+        backgroundColor: "#FF8D29",
         width: 300
       },
       cardcover:{
@@ -81,7 +81,7 @@ height: '100%',
       card2:{
        
         margin:10,
-        backgroundColor: "#6684a1",
+        backgroundColor: "#FF8D29",
       },
       Paragraph:{
         width: 500
@@ -96,7 +96,7 @@ height: '100%',
     cardButton1: {
       
       margin: 1,
-      backgroundColor: "#6684a1",
+      backgroundColor: "#F6FBF4",
      
       bottom:0,
   }

@@ -225,7 +225,7 @@ app.get('/exercises', async (req, res) => {
         }
       } else if (user.locked_until > new Date()) {
         // Account is locked
-        const minutesLeft = Math.ceil((user.locked_until - new Date()) / 60000);
+        const minutesLeft = Math.ceil((user.locked_until - new Date()) / 300);
         return res.status(403).json({
           errorMessage: `Your account is locked until ${user.locked_until.toLocaleString()}. Please try again in ${minutesLeft} Minutes.`,
         });
@@ -318,4 +318,31 @@ app.get('/exercises', async (req, res) => {
             console.log(err)
         })
   })
+  app.post('/profile', async (req, res) => {
+    try {
+      const { weight, height } = req.body;
+  
+      const errors = validationResult(req);
+  
+      if (!errors.isEmpty()) {
+        const errorMessages = errors.array().map(error => error.msg);
+        return res.status(400).send({ success: false, message: errorMessages });
+      }
+  
+      // Create a new profile record using Prisma
+      const newProfile = await prisma.profile.create({
+        data: {
+          weight,
+          height,
+        },
+      });
+  
+      console.log('New Profile Data:', newProfile);
+      return res.status(200).send({ success: true, message: 'Profile created successfully' });
+    } catch (err) {
+      console.error(err);
+      return res.status(500).json({ success: false, message: 'Internal server error' });
+    }
+  });
+  
 module.exports = app;

@@ -5,14 +5,14 @@ export const Menustyle = StyleSheet.create({
     content: {
       padding: 0,
         flex: 1,
-        backgroundColor: "#1b1e31",
+        backgroundColor: "#354259",
       },
       
       
         top: {
           flex: .2,
           borderWidth: 10,
-          borderColor: "#fffff",
+          borderColor: "#354259",
         },
         bottom: {
           flex: .8,
@@ -20,8 +20,7 @@ export const Menustyle = StyleSheet.create({
         },
         card:{
           padding: 5,
-          flexDirection:"row",
-          backgroundColor:"#1f1f1f"
+          flexDirection:"row"
            },
       image: {
         flex: 1,
@@ -63,8 +62,7 @@ export const Menustyle = StyleSheet.create({
         alignItems: 'center'
       },
       cardcover:{
-        backgroundColor: "#2f2d26",
-
+        
       },
       card1:{
         padding: 0,

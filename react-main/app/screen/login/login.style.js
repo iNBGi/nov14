@@ -1,49 +1,54 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
 export const loginStyle = StyleSheet.create({
-  content: {
-    display: "flex",
+  container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "row",
-    backgroundColor: "#1b1e31",
-    color: "#1b1e31", // Default text color for buttons
-
+    backgroundColor: '#fff', // Set your desired background color
   },
-  view: {
-    width: "80%",
+  content: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   card: {
-    padding: 10,
-    backgroundColor: "#1f1f1f",
-    borderRadius: 10, // Add border radius for rounded corners
+    width: '80%',
+    backgroundColor: '#f0f0f0', // Set your desired card background color
+    borderRadius: 10,
+    elevation: 5,
   },
   cardTitle: {
-    color: "#ffffff", // Text color for the card title
+    color: "#007BFF",
   },
-  cardButton: {
-    margin: 10,
-    marginLeft: 0,
-    marginRight: 0,
-    backgroundColor: "#f6f8fa",
-    borderRadius: 10, // Add border radius for rounded corners
-
+  inputContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    borderRadius: 5,
+    marginVertical: 8,
+    elevation: 3,
   },
-  image: {
+  icon: {
+    padding: 10,
+  },
+  input: {
     flex: 1,
-    justifyContent: "center",
-    width: 340, height: 360
-},
-  cardText: {
-    color: "#ffffff", // Text color for the text inside the card
+    paddingVertical: 10,
+    paddingHorizontal: 5,
   },
-  buttonText: {
-    color: "#ffffff", // Default text color for buttons
+  iconButton: {
+    marginRight: 10,
+    backgroundColor: 'transparent'
   },
-  textinput:{
-    margin: 3,
-    color: 'white', // Set the text color to white
-  }
-  
+  forgotButton: {
+    marginVertical: 8,
+    color: "#007BFF",
+  },
+  loginButton: {
+    marginVertical: 8,
+    backgroundColor: "#007BFF",
+  },
+  registerButton: {
+    marginVertical: 8,
+    color: "#007BFF",
+  },
 });

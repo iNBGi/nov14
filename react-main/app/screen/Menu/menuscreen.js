@@ -4,21 +4,12 @@ import { SafeAreaView,Text,View,ImageBackground,Image,ScrollView} from 'react-na
 import { Card, TextInput,Button,Title,Paragraph} from 'react-native-paper';
 import { Menustyle } from './menu.style';
 
+
 export const Menuscreen = ({navigation, route }) => {
   
     return(
 <SafeAreaView style={Menustyle.content}>
     <View>
-
-    <Card >
-       <Card.Actions  style={Menustyle.card}>
-       <Image style={{width:35,height:35,marginRight: 5}}  source={require('./asset/blacklogo.png')}></Image>
-       <Button onPress={() => navigation.navigate('Menu')}>Menu</Button>
-       <Button onPress={() => navigation.navigate('Home')}>Home</Button>
-       <Button onPress={() => navigation.navigate('About')}> About</Button>
-       <Button onPress={() => navigation.navigate('Contact')}>Contact</Button>
-    </Card.Actions>
-    </Card>
    
    <ScrollView>
     <Card style={Menustyle.card1}>
@@ -39,7 +30,7 @@ export const Menuscreen = ({navigation, route }) => {
       <Paragraph>Pose Detection for different exercises</Paragraph>
     </Card.Content>
     <Card.Actions>
-    <Button onPress={() => navigation.navigate('Sensorscreen')}>Go</Button>
+    <Button onPress={() => navigation.navigate('Sensormenu')}>Go</Button>
     </Card.Actions>
     </Card>
 
