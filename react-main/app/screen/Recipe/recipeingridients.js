@@ -10,11 +10,11 @@ import {
 import { AuthContext } from "../../../Context/authContext";
 import axios from "axios";
   import { RecipeContext } from "../../../Context/recipeContext";
-import RecipeCard from "../../Content/Recipecard";
+import Recipeingridientscard from "../../Content/Recipeingridientscard";
 import { Aboutstyle } from "./about.style";
 import { Card, TextInput,Button,Title,Paragraph} from 'react-native-paper';
 
-export const RecipeDetails = ({navigation, route}) => {
+export const RecipeIngridients = ({navigation, route}) => {
     const [recipes] = useContext(RecipeContext);
     const [loading, setLoading]= useState(false);
     const { recipeId } = route.params;
@@ -63,12 +63,13 @@ export const RecipeDetails = ({navigation, route}) => {
         <View style={Aboutstyle.content}>
            <Card >
        <Card.Actions  style={Aboutstyle.card}>
+       <Button onPress={() => navigation.navigate('RecipeDetails', { recipeId })}>Description</Button>
        <Button onPress={() => navigation.navigate('RecipeIngridients', { recipeId })}>Ingridients</Button>
        <Button onPress={() => navigation.navigate('RecipeSteps', { recipeId })}>Steps</Button>
        <Button onPress={() => navigation.navigate('RecipeNutrition', { recipeId })}>Nutrition</Button>
     </Card.Actions>
     </Card>
-        <RecipeCard recipeId = {recipeId} nutrition = {recipenutritions} recipeinformations = {selectedRecipess} />
+        <Recipeingridientscard recipeId = {recipeId} recipeinformations = {selectedRecipess} />
         
       <View style={{ backgroundColor: "#ffffff" }}>
       </View>

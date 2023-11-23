@@ -329,11 +329,15 @@ app.get('/exercises', async (req, res) => {
         return res.status(400).send({ success: false, message: errorMessages });
       }
   
+      // Assuming you have a valid user ID (replace 'userId' with your actual user ID)
+      const userId = 'userId';
+  
       // Create a new profile record using Prisma
       const newProfile = await prisma.profile.create({
         data: {
           weight,
           height,
+          userId, // Add the userId to associate the profile with a user
         },
       });
   

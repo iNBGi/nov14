@@ -1,7 +1,7 @@
 import{ StyleSheet } from "react-native";
 
 
-export const Recipestyle = StyleSheet.create({
+export const Recipestylecard = StyleSheet.create({
     content: {  
       padding: 0,
         flex: 1,

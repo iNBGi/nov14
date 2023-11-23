@@ -15,48 +15,93 @@ const ExerciseCard = ({exerciseinformations, exerciseId}) => {
 
   //handle delete prompt
   return (
-    <SafeAreaView style={Menustyle.content}>
-    <View>
-    <Card >
-       </Card>
-       <ScrollView>
-   <View>
-       <Card style={Menustyle.card3}>
-       <Card.Content>
-       <ScrollView>
-    {selectedExerciseInformation ? ( // Check if selectedrecipeinformation exists
-      <>
-       <YoutubeIframe
-       height={300}
-videoId={selectedExerciseInformation.videolink}
+    <SafeAreaView style={styles.content}>
+      <ScrollView>
+        <View style={styles.cardContainer}>
+          <Card style={styles.card3}>
+            <Card.Content>
+              {selectedExerciseInformation ? (
+                <>
+                  <Title style={styles.title}>
+                    {selectedExerciseInformation.exercise}
+                  </Title>
+                  <View style={styles.line}></View>
 
-                    
-                      // Set to false to auto-play the video
-                      />
-    
-    <Title style={{ textAlign: 'center', color: 'white' }}>{selectedExerciseInformation.exercise}</Title>
-              <Title style={{ textAlign: 'center', color: 'white' }}>Description</Title>
-              <Paragraph style={{ color: 'white' }}>{selectedExerciseInformation.description}</Paragraph>
-              <Title style={{ textAlign: 'center', color: 'white' }}>Target muscles</Title>
-              <Paragraph style={{ color: 'white' }}>{selectedExerciseInformation.muscle}</Paragraph>
-              <Title style={{ textAlign: 'center', color: 'white' }}>Steps</Title>
-              <Paragraph style={{ color: 'white' }}>{selectedExerciseInformation.steps}</Paragraph>
-      
-      </>
-    ) : (
-      <Text>Exercise information not found.</Text>
-    )}
-  </ScrollView>
- </Card.Content>
-       </Card>
+                  <YoutubeIframe
+                    height={200}
+                    videoId={selectedExerciseInformation.videolink}
+                  />
+                  <View style={styles.line}></View>
 
-   </View>   
+                  <Title style={styles.subtitle}>Description</Title>
+                  <Paragraph style={styles.paragraph}>
+                    {selectedExerciseInformation.description}
+                  </Paragraph>
+                  <View style={styles.line}></View>
 
-   </ScrollView>
-    </View>
-        
-</SafeAreaView>
+                  <Title style={styles.subtitle}>Target muscles</Title>
+                  <Paragraph style={styles.paragraph}>
+                    {selectedExerciseInformation.muscle}
+                  </Paragraph>
+                  <View style={styles.line}></View>
+
+                  <Title style={styles.subtitle}>Steps</Title>
+                  <Paragraph style={styles.paragraph}>
+                    {selectedExerciseInformation.steps}
+                  </Paragraph>
+                  <View style={styles.line}></View>
+                </>
+              ) : (
+                <Text>Exercise information not found.</Text>
+              )}
+            </Card.Content>
+          </Card>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
+};
+
+const styles = {
+  content: {
+    flex: 1,
+    backgroundColor: '#6684a1',
+    padding: 10,
+  },
+  cardContainer: {
+    margin: 10,
+  },
+  card3: {
+    backgroundColor: '#4b83b0',
+    borderRadius: 10,
+    padding: 15,
+    marginBottom: 10,
+  },
+  line: {
+    borderBottomColor: 'black',
+    borderBottomWidth: 12,
+    marginVertical: 5,
+  },
+  title: {
+    textAlign: 'center',
+    color: 'black',
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  subtitle: {
+    textAlign: 'center',
+    color: 'black',
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginTop: 10,
+    marginBottom: 5,
+  },
+  paragraph: {
+    color: 'black',
+    fontSize: 16,
+    marginBottom: 10,
+  },
 };
 
 export default ExerciseCard;

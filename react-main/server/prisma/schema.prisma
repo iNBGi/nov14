@@ -34,6 +34,7 @@ model Recipeinformation {
   ingredients String
   steps String
   nutrition String
+  description String
 }
 
 model Exercises {

@@ -32,13 +32,18 @@ export const ProfileScreen = ({ navigation }) => {
     // For example, you can navigate to the Login screen after successful registration
     navigation.navigate('Profile');
   };
+  
 
   return (
     <SafeAreaView>
       <View>
-        <Text style={{ fontSize: 20, textAlign: 'center', marginVertical: 20 }}>
-          Welcome!
-        </Text>
+      <Card>
+    <Card.Content>
+      <Text style={{ fontSize: 20, textAlign: 'center', marginVertical: 20 }}>
+        Welcome! {state && state.firstname ? state.firstname : 'Guest'}!
+      </Text>
+    </Card.Content>
+  </Card>
         <Card.Title />
         <Card.Content>
           {/* TextInput components with consistent styling */}

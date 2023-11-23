@@ -4,7 +4,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { TouchableOpacity,SafeAreaView,Text,View,ImageBackground,Image,ScrollView} from 'react-native';
 import { Card, TextInput,Button,Title,Paragraph} from 'react-native-paper';
 import { Menustyle } from './menu.style';
-import { Aboutstyle } from './about.style';
 import { RecipeContext } from '../../../Context/recipeContext';
 import { AuthContext } from '../../../Context/authContext';
 import { RecipeDetails } from './recipedetails';
@@ -36,9 +35,6 @@ export const Recipescreen = ({navigation, route}) => {
     
 </SafeAreaView>
 
-
-    
-   
     );
  };
  

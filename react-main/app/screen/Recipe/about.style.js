@@ -69,5 +69,13 @@ export const Aboutstyle = StyleSheet.create({
       marginBottom:100,
       backgroundColor: "#FFF5E0",
     },
-    
+    card:{
+      padding: 20,
+      margin:0,
+      marginBottom:0,
+      backgroundColor: "#ffffff",
+    },
+    view:{
+      backgroundColor: "#000000"
+    }, 
 })
