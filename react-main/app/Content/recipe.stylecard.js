@@ -5,7 +5,7 @@ export const Recipestylecard = StyleSheet.create({
     content: {  
       padding: 0,
         flex: 1,
-        backgroundColor: "#354259",
+        backgroundColor: "#ffffff",
       },
       separator: {
         borderBottomColor: 'gray',

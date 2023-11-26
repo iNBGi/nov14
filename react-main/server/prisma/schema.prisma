@@ -12,6 +12,7 @@ datasource db {
 }
 
 
+
 model User {
   id             String   @id @default(auto()) @map("_id") @db.ObjectId 
   firstname      String
@@ -41,6 +42,7 @@ model Exercises {
    id             String   @id @default(auto()) @map("_id") @db.ObjectId 
   exercise      String
   image           String
+  sensoravailable Boolean
 }
 
 model Exerciseinformation {
@@ -48,9 +50,15 @@ model Exerciseinformation {
   exercise      String
   videolink     String
   description   String
+  steps   String
+  muscle   String
 }
-model Profile {
+
+model Nutrition {
    id             String   @id @default(auto()) @map("_id") @db.ObjectId 
-  height      String
-  weight     String
+  calories      String
+  carbohydrates String 
+  protein     String
+  fat   String
+  cholesterol   String
 }

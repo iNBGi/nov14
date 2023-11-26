@@ -32,7 +32,7 @@ const Recipeingridientscard = ({ nutrition, recipeinformations, recipeId }) => {
     : [];
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: 'white'  }}>
       <ScrollView>
         <View>
           <Card>
@@ -61,47 +61,6 @@ const Recipeingridientscard = ({ nutrition, recipeinformations, recipeId }) => {
       </ScrollView>
     </SafeAreaView>
   ); 
-};
-const styles = {
-  content: {
-    flex: 1,
-    backgroundColor: '#6684a1',
-    padding: 10,
-  },
-  cardContainer: {
-    margin: 10,
-  },
-  card3: {
-    backgroundColor: '#4b83b0',
-    borderRadius: 10,
-    padding: 15,
-    marginBottom: 10,
-  },
-  line: {
-    borderBottomColor: 'black',
-    borderBottomWidth: 12,
-    marginVertical: 5,
-  },
-  title: {
-    textAlign: 'center',
-    color: 'black',
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginBottom: 10,
-  },
-  subtitle: {
-    textAlign: 'center',
-    color: 'black',
-    fontSize: 18,
-    fontWeight: 'bold',
-    marginTop: 10,
-    marginBottom: 5,
-  },
-  paragraph: {
-    color: 'black',
-    fontSize: 16,
-    marginBottom: 10,
-  },
 };
 
 export default Recipeingridientscard;

@@ -65,17 +65,17 @@ const ExerciseCard = ({exerciseinformations, exerciseId}) => {
 const styles = {
   content: {
     flex: 1,
-    backgroundColor: '#6684a1',
+    backgroundColor: '#ffffff',
     padding: 10,
   },
   cardContainer: {
     margin: 10,
   },
   card3: {
-    backgroundColor: '#4b83b0',
-    borderRadius: 10,
-    padding: 15,
-    marginBottom: 10,
+    backgroundColor: '#fffff',
+    borderRadius: 0,
+    padding: 0,
+    marginBottom: 0,
   },
   line: {
     borderBottomColor: 'black',

@@ -22,7 +22,7 @@ const RecipeCard = ({ nutrition, recipeinformations, recipeId }) => {
 
   return (
     
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: 'white'  }}>
     <ScrollView>
       <View>
         <Card>
